@@ -1,8 +1,8 @@
-#include <stdio.h>
+##include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <malloc.h> 
-#include<stdbool.h>
+#include <stdbool.h>
 struct Nodo
 {
   char nombreTarea[30]; 
@@ -16,13 +16,7 @@ struct ArbolBinario
 {
   struct Nodo *raiz;
 }; 
-/*
-void inicializa_arbol(struct ArbolBinario *arbol);
-struct Nodo *crea_nodo(char *nombreTarea,int tareaRealizada,float prioridadTarea);
-void recorre_orden(struct Nodo *nodo);
-void agrega_nodo(struct ArbolBinario *arbol,char *nombre,char *apellido_paterno,float sueldo, char *Valor);
-struct Nodo *busca_nodo(struct ArbolBinario *arbol,int valor);
-*/
+
 void inicializa_arbol(struct ArbolBinario *arbol)
 {
   arbol->raiz = NULL;
@@ -177,9 +171,9 @@ int elimina_nodo(struct ArbolBinario *arbol,char *valor)
                 p->tareaRealizada=q->tareaRealizada;
                 q->tareaRealizada=Nedad;
                 
-                float Nsueldo=p->prioridadTarea;
+                int nTarea=p->prioridadTarea;
                 p->prioridadTarea=q->prioridadTarea;
-                q->prioridadTarea=Nsueldo;
+                q->prioridadTarea=nTarea;
                 
                 /*char Nnombre[]=p->nombreTarea;
                 p->nombreTarea=->q->nombreTarea
@@ -226,12 +220,12 @@ int main ()
       fflush(stdin);
       tareaRealizada=false;
       fflush( stdin );
-      printf("\nIntroduzca la prioridad de la tarea donde 1 es la opción mas importante, 2 es una tarea media y 3 es una tarea facil: ");
+      printf("\nIntroduzca la prioridad de la tarea donde 1 es la opcion mas importante, 2 es una tarea media y 3 es una tarea facil: ");
       fflush( stdin );
       scanf("%i",&prioridadTarea);
     //  strcat(p->valor,nombre);
       agrega_nodo(&arbol,nombreTarea,tareaRealizada,prioridadTarea);
-      printf("Los datos del empleado fueron guardados exitosamente!\n");
+      printf("Los datos de la tarea fueron guardados exitosamente!\n");
       system("pause");
 
     break;
@@ -241,13 +235,13 @@ int main ()
 	  struct Nodo *Auxi = (struct Nodo *)malloc(sizeof(struct Nodo));
 	  fflush(stdin);
       system("cls");
-      printf("Por favor, introduzca el nombre del empleado a buscar:\n");
+      printf("Por favor, introduzca el nombre de la tarea a buscar:\n");
       fflush(stdin);
       gets(nombreTarea);
       fflush(stdin);
       Auxi=busca_nodo(&arbol,nombreTarea);
       if(Auxi!=NULL){
-      printf("Los datos del empleado son: prioridadTarea: %i. tareaRealizada: %i. nombreTarea: %s.",Auxi->prioridadTarea,Auxi->tareaRealizada,Auxi->nombreTarea);
+      printf("Los datos de la tarea son: prioridadTarea: %i. tareaRealizada: %i. nombreTarea: %s.",Auxi->prioridadTarea,Auxi->tareaRealizada,Auxi->nombreTarea);
       system("pause");
       }else{
       printf("El dato que busca no se encuentra en la lista...");
@@ -273,12 +267,12 @@ int main ()
 	  struct Nodo *Aux2;// = (struct Nodo *)malloc(sizeof(struct Nodo));
 	  fflush(stdin); 
 	  Aux2=arbol.raiz;   
-      printf("Los empleados y sus datos son los siguientes:\n\n");
+      printf("Los datos de la tarea son los siguientes:\n\n");
       recorre_orden(Aux2);
     break;
     
     case 5:
-    	
+    	printf("Espera esta funcion proximamente");
     	break;
     case 6://
     printf("Vuelva pronto");
